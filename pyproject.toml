@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygments-pharo-lexer"
+version = "0.1.0"
+description = "A Pygments lexer plugin for Pharo Smalltalk."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  { name = "Pharo-LLM" },
+]
+keywords = ["pygments", "lexer", "pharo", "smalltalk", "syntax-highlighting"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Text Processing :: Filters",
+]
+dependencies = ["Pygments>=2.19"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.entry-points."pygments.lexers"]
+pharo = "pygments_pharo.lexer:PharoLexer"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
