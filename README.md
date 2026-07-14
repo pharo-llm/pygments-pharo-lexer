@@ -35,8 +35,8 @@ python -m twine check dist/*
 
 Publishing is automated by the `Publish to PyPI` GitHub Actions workflow. In
 PyPI, create a pending Trusted Publisher for project `pygments-pharo-lexer` with
-owner `pharo-llm`, repository `pygments-pharo-lexer`, workflow `publish.yml`,
-and environment `pypi`, then push a version tag:
+owner `pharo-llm`, repository `pygments-pharo-lexer`, and workflow
+`publish-pypi.yml`, then push a version tag:
 
 ```console
 git tag v0.1.0
