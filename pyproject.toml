@@ -16,6 +16,7 @@ keywords = ["pygments", "lexer", "pharo", "smalltalk", "syntax-highlighting"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.9",
@@ -27,6 +28,11 @@ classifiers = [
   "Topic :: Text Processing :: Filters",
 ]
 dependencies = ["Pygments>=2.19"]
+
+[project.urls]
+Homepage = "https://github.com/pharo-llm/pygments-pharo-lexer"
+Repository = "https://github.com/pharo-llm/pygments-pharo-lexer"
+Issues = "https://github.com/pharo-llm/pygments-pharo-lexer/issues"
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
